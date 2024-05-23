@@ -8,8 +8,8 @@ jobs:
        image: mcr.microsoft.com/playwright:v1.43.1
     steps:
       - name: Run tests
-        run: |
-          npm ci
+          run: |
+          
           echo "Run playwright tests"
           npm run test:ci
         
