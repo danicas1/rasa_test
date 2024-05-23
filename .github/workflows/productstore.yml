@@ -1,14 +1,4 @@
-name: Productstore Tests
-on: 
-  push:
-       branhches: [main]
-jobs:
- tests:
-   runs-on: ubuntu-latest
-   steps:
-        -name: Checkout repository
-      
-         name: GitHub Actions Demo
+name: GitHub Actions Demo
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
 jobs:
