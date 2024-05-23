@@ -1,20 +1,28 @@
-steps:
-  - name: Checkout repository
-    uses: actions/checkout@v2
+name: GitHub Actions Demo
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    container:
+       image: mcr.microsoft.com/playwright:v1.43.1
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-  - name: Set up Node.js
-    uses: actions/setup-node@v2
-    with:
-      node-version: '16' # Specify the Node.js version you need
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16' # Specify the Node.js version you need
 
-  - name: Install dependencies
-    run: |
-      if [ ! -f package-lock.json ]; then
-        npm install
-      fi
-      npm ci
+      - name: Install dependencies
+        run: |
+          if [ ! -f package-lock.json ]; then
+            npm install
+          fi
+          npm ci
 
-  - name: Run Playwright tests
-    run: |
-      echo "Run playwright tests"
-      npm run test:ci
+      - name: Run Playwright tests
+        run: |
+          echo "Run Playwright tests"
+          npm run test:ci
