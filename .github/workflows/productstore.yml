@@ -9,7 +9,6 @@ jobs:
     steps:
       - name: Run tests
           run: |
-          
           echo "Run playwright tests"
           npm run test:ci
         
