@@ -1,0 +1,91 @@
+Test case 1 - 
+1. Log in as existing user
+2. Add product to the basket
+3. Logout
+4. Login again as the same user
+5. Go to the cart and assert that previously added product are present
+
+Expected result: previously added products should be present 
+
+Test case 2 - 
+1. Login as user
+2. Add some product to cart
+3. Go to cart 
+4. Delete that product
+5. Check if place an order button is enabled
+
+Expected result: place an order button shouldn't be enabled
+
+Test case 3 - 
+
+1. Login as user
+2. Add 2 products to cart
+3. Sum up the prices of the cart
+4. Go to cart and assert that total is equal to the sum of prices 
+5. Place the order and on success modal check if the price is correct
+
+Expected result: Price displayed on success modal should be equal to the sum of both prices
+
+Test case 4 - 
+
+1. Login as user
+2. Add some product to cart
+3. Go to the cart
+4. Place an order
+5. In contact info enter incorect format of cc number
+6. Check if the input field is validated upon pressing the purchase button
+
+Expected result: User is not able to proceed with purchase and info about wrong format is displayed to him
+
+Test case 5 - 
+
+1. Login as user
+2. Add some product to cart
+3. Go to cart
+4. Check if the correct title is displayed
+5. Check if the correct price is displayed
+6. Check if delete button is displayed
+
+Expected result: All the info about product added to the cart should be correctly displayed
+
+Test case 6 -
+
+1. Login as user
+2. Add two products to cart
+3. Go to cart
+4. Check the total
+5. Delete one product
+6. Check if the total price is reduced for the price of the removed product 
+
+Expected result: The price should be reduced for the price of the removed product 
+
+Test case 7 - 
+1. Login as user
+2. Add some product to cart
+3. Go to cart
+4. Place an order
+5. In every field of contact form enter space
+6. Click on purchase button
+
+Expected result: User shouldn't be able to proceed with purchase
+
+Test case 8 - 
+
+1. Login as user
+2. Click on contact
+3. Enter invalid email form
+4. Click on 'send message' button
+
+Expected result: User shouldn't be able to send a message and he is informed about the invalid form of his email
+
+
+Test case 8 - 
+
+1. Login as user
+2. Click on contact
+3. Leave all the fields empty
+4. Click on 'send message' button
+
+Expected result: User shouldn't be able to send a message and he is informed about the empty fields
+
+
